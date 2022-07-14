@@ -8,11 +8,7 @@
 import UIKit
 import SafariServices
 
-// tableView
-// Custom Cell
-// API Caller
-// Open news
-// Search news
+
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
     
@@ -68,7 +64,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         }
     }
     
-//table
+    // MARK: table
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModels.count
     }
@@ -95,7 +91,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 150
     }
-//search
+    
+    // MARK: search
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let text = searchBar.text, !text.isEmpty else {
             return
@@ -125,4 +122,3 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                     
         }
 }
-
